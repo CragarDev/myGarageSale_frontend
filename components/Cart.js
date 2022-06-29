@@ -5,6 +5,7 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { Quantity } from "../styles/ProductDetailStyle";
 import getStripe from "../lib/getStripe";
 import formatMoney from "../lib/formatMoney";
+import Image from "next/image";
 
 // animations variants
 const card = {
@@ -81,7 +82,7 @@ export default function Cart() {
                 // <Card initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }} key={item.slug}>
                 // <Card whileHover={{ scale: 1.1 }} onHoverStart={(e) => {}} onHoverEnd={(e) => {}} variants={card} animate="show" initial="hidden" key={item.slug}>
                 <Card variants={card} layout key={item.slug}>
-                  <img src={item.image.data.attributes.formats.thumbnail.url} alt={item.title} />
+                  <Image src={item.image.data.attributes.formats.thumbnail.url} alt={item.title} />
                   <CardInfo layout>
                     <h2>{item.title}</h2>
                     <Quantity>

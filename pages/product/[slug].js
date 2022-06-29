@@ -6,6 +6,7 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { useStateContext } from "../../lib/context";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
+import Image from "next/image";
 
 // example one way of doing this
 // import ShopContext from "../../lib/context";
@@ -20,15 +21,15 @@ export default function ProductDetails() {
   const { query } = useRouter();
   // console.log("::: query ::: ==>", query.slug);
 
-  // reset the qty to 1 when the product is added to the cart
-  useEffect(() => {
-    setQty(1);
-  }, []);
-
   // example of using context and state
   // const { qty } = useContext(ShopContext);
   const { qty, setQty, increaseQty, decreaseQty, onAdd } = useStateContext();
   // console.log("::: qty - slug ::: ==>", qty);
+
+  // reset the qty to 1 when the product is added to the cart
+  useEffect(() => {
+    setQty(1);
+  }, []);
 
   // fetch graphql query
   const [results] = useQuery({ query: GET_PRODUCT_QUERY, variables: { slug: query.slug } });
@@ -60,7 +61,7 @@ export default function ProductDetails() {
         {/* <Link href={"/"}>Home</Link> */}
         {/* <h1>My Garage Sale - Details Page</h1> */}
         <Detail>
-          <img src={image.data.attributes.formats.medium.url} alt={title} />
+          <Image src={image.data.attributes.formats.medium.url} alt={title} />
 
           <Info>
             <div>
