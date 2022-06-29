@@ -11,3 +11,15 @@ export const GalleryStyle = styled.div`
     margin-bottom: 1rem;
   }
 `;
+
+export const GalleryHeaders = styled.div`
+  h1 {
+    margin: 1rem 0;
+    padding: 0;
+    color: white;
+  }
+  h3 {
+    color: red;
+    margin-bottom: 1rem;
+  }
+`;

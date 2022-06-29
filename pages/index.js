@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useQuery } from "urql";
 import { PRODUCT_QUERY } from "../lib/query";
 import Product from "../components/Products";
-import { GalleryStyle } from "../styles/GalleryStyle";
+import { GalleryStyle, GalleryHeaders } from "../styles/GalleryStyle";
 
 // import Link from "next/link";
 // import Image from "next/image";
@@ -36,10 +36,12 @@ export default function Home() {
 
       <main>
         {/* <Image src={bronzeCopper} alt="bronzeCopper" layout="fill" /> */}
-        <GalleryStyle>
+        <GalleryHeaders>
           <h1>Hello and welcome to My Garage Sale</h1>
           <h3>This is a development test site only, Not in production at this time</h3>
-          <br />
+        </GalleryHeaders>
+        <br />
+        <GalleryStyle>
           {products.map((product) => (
             <Product key={product.attributes.slug} product={product} />
           ))}
