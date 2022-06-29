@@ -35,7 +35,9 @@ export default function Home() {
       </Head>
 
       <main>
-        {/* <h1>Hello NExt - My Garage Sale</h1> */}
+        <h1>Hello and welcom to My Garage Sale</h1>
+        <h3>This site is a development test site only</h3>
+        <h3>Not for production</h3>
         {/* <Image src={bronzeCopper} alt="bronzeCopper" layout="fill" /> */}
         <GalleryStyle>
           {products.map((product) => (
