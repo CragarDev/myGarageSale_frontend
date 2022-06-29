@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { FaShoppingBasket } from "react-icons/fa";
-import { NavStyle, NavItems } from "../styles/NavStyles";
+import { FaShoppingBasket, FaGithub } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { SiHomeassistantcommunitystore } from "react-icons/si";
+import { NavStyle, NavItems, Logo } from "../styles/NavStyles";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
 const { AnimatePresence, motion } = require("framer-motion");
@@ -13,8 +15,28 @@ export default function Nav() {
   console.log("::: user :::==>", user);
   return (
     <NavStyle>
-      <Link href="/">myGARAGEsale</Link>
+      <Logo>
+        <Link href="/">
+          <div>
+            <SiHomeassistantcommunitystore />
+            <h3>myGARAGEsale</h3>
+          </div>
+        </Link>
+      </Logo>
+
       <NavItems>
+        <a href="mailto:cragardev@gmail.com">
+          <div>
+            <AiOutlineMail />
+            Contact
+          </div>
+        </a>
+        <a href="https://github.com/CragarDev/myGarageSale_frontend" target="_blank" rel="noopener noreferrer">
+          <div>
+            <FaGithub />
+            Code
+          </div>
+        </a>
         <User />
         <div onClick={() => setShowCart(true)}>
           {totalQuantity > 0 && (
