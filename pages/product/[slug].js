@@ -6,7 +6,6 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { useStateContext } from "../../lib/context";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
-import Image from "next/image";
 
 // example one way of doing this
 // import ShopContext from "../../lib/context";
@@ -61,7 +60,7 @@ export default function ProductDetails() {
         {/* <Link href={"/"}>Home</Link> */}
         {/* <h1>My Garage Sale - Details Page</h1> */}
         <Detail>
-          <Image src={image.data.attributes.formats.medium.url} alt={title} />
+          <img src={image.data.attributes.formats.medium.url} alt={title} />
 
           <Info>
             <div>

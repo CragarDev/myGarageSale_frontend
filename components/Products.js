@@ -2,7 +2,6 @@
 import { ProductStyle } from "../styles/ProductStyle";
 import Link from "next/link";
 import formatMoney from "../lib/formatMoney";
-import Image from "next/image";
 
 export default function Product({ product }) {
   // get product from props
@@ -12,7 +11,7 @@ export default function Product({ product }) {
     <ProductStyle>
       <Link href={`/product/${slug}`}>
         <div>
-          <Image src={image.data.attributes.formats.small.url} alt={title} />
+          <img src={image.data.attributes.formats.small.url} alt={title} />
         </div>
       </Link>
       <h2>{title}</h2>
