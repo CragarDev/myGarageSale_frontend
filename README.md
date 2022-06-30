@@ -3,11 +3,11 @@
 live link: https://my-garage-sale-frontend.vercel.app/
 
 ## An E-Commerce Web App
-### Built using React/NextJs, Stapi/GraphQL for the database, Auth0 for login/registraion, and Stripe for payments
-### Utilized Style Compenents for styling
-### Deployed using Heroku fro the backend and Vercei for the frontend
+### Built using React/NextJs, Stapi/GraphQL/Cloudinary for the database and storage, Auth0 for login/registraion/authentication, and Stripe for payments
+### Utilized Styled-Compenents for css styling
+### Deployed using Heroku for the backend and Vercei for the frontend
 ###
-### This is just a development web app tro training purposes only.
+### This is just a development web app for training purposes only.
 _____
 
 #
